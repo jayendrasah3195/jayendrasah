@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayendra Sah | Engineering Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #1a1a1a;
+      --accent-color: #0056b3;
+      --bg-light: #f8f9fa;
+      --text-main: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      display: flex;
+    }
+
+    /* Sidebar Navigation */
+    nav {
+      width: 250px;
+      height: 100vh;
+      background: var(--primary-color);
+      color: white;
+      position: fixed;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+    }
+
+    nav p {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 10px 0;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: white;
+      padding-left: 10px;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 280px;
+      padding: 3rem;
+      max-width: 1000px;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      border-left: 5px solid var(--accent-color);
+      padding-left: 15px;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    /* Project Grid Layout */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .project-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: #fff;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 1.2rem 0;
+      background: #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e9ecef;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .contact-info strong {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+      nav { width: 100%; height: auto; position: relative; padding: 1.5rem; box-sizing: border-box; }
+      .main-content { margin-left: 0; padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Jayendra Sah</h1>
+    <p>ER. | CIVIL ENGINEER</p>
+    <a href="#about">Profile</a>
+    <a href="#services">Specializations</a>
+    <a href="#projects">Project Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="main-content">
+    
+    <section id="about">
+      <h2>Professional Profile</h2>
+      <p>As a Registered Civil Engineer, I focus on the precision of Surveying and Mapping to lay the groundwork for sustainable infrastructure. My career is built on optimizing technical workflows and delivering high-quality designs in road modeling and structural planning. I am passionate about the intersection of engineering and education, regularly producing tutorials to help streamline design processes for the wider engineering community.</p>
+    </section>
+
+    <section id="services">
+      <h2>Engineering Specializations</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+        <ul style="margin: 0; padding-left: 20px;">
+          <li>Rural & Urban Road Design</li>
+          <li>Detailed Project Reports (DPR)</li>
+          <li>Drafting</li>
+          <li>3D Architectural Animation</li>
+        </ul>
+        <ul style="margin: 0; padding-left: 20px;">
+          <li>Irrigation & Water Supply</li>
+          <li>Hydropower Engineering</li>
+          <li>Surveying & Mapping</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Project Gallery</h2>
+      <div class="project-grid">
+<!-- New Project: Traverse Report -->
+<div class="project-card">
+  <h3>7. Closed Traverse Survey Report & Data</h3>
+  <p>A professional survey report detailing the methodology, error adjustment (Bowditch Rule), and coordinate computation for a closed loop traverse. Achieved a high precision of 1:73,000.</p>
+  
+  <div style="margin-top: 15px; display: flex; gap: 10px;">
+    <!-- Replace '#' with your actual file paths -->
+    <a href="traverse_report.pdf" download class="tag" style="text-decoration: none; background: var(--accent-color); color: white;">
+      📥 Download Report (PDF)
+    </a>
+    <a href="traverse_data.xlsx" download class="tag" style="text-decoration: none; background: #28a745; color: white;">
+      📊 Download Excel Data
+    </a>
+  </div>
+  
+  <div style="margin-top: 10px;">
+    <span class="tag">Total Station</span>
+    <span class="tag">Bowditch Rule</span>
+    <span class="tag">Geomatics</span>
+  </div>
+</div>
+
+        <!-- Previous Video (Re-added) -->
+        <div class="project-card">
+          <h3>1. SW Maps Tutorial in Nepali</h3>
+          <p>This technical guide demonstrates how to manage layer attributes for efficient surveying and field data collection.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/F2IolZK3GQM" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div>
+            <span class="tag">SW Map</span>
+            <span class="tag">Layer Attributes</span>
+          </div>
+        </div>
+
+        <!-- New Video 1 -->
+        <div class="project-card">
+          <h3>2. How to Convert UTM Coordinates to KML & View in Google Earth</h3>
+          <p>Learn to convert UTM coordinates to KML/KMZ using Global Mapper and visualize survey data in Google Earth Pro. Covers Excel preparation and datum selection.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/0RZAhE1P030" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div>
+            <span class="tag">Global Mapper</span>
+            <span class="tag">Google Earth Pro</span>
+            <span class="tag">UTM Conversion</span>
+          </div>
+        </div>
+
+        <!-- New Video 2 -->
+        <div class="project-card">
+          <h3>3. Measure Land Using Mobile App | Land Area Measurement App</h3>
+          <p>Accurately measure land plots using a mobile phone. Create project attributes, draw polygons, and convert square meters to Ropani-Ana-Paisa-Dam.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/PBaAzbGL1n8" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div>
+            <span class="tag">SW Maps</span>
+            <span class="tag">Land Survey</span>
+            <span class="tag">Mobile Mapping</span>
+          </div>
+        </div>
+
+        <!-- New Video 3 -->
+        <div class="project-card">
+          <h3>4. How to Convert UTM to Latitude/Longitude Using Excel + Import to Google Earth Pro | Easy Tutorial</h3>
+          <p>Convert Easting and Northing into Lat/Long using SW UTM software and Excel. Essential for GPS data preparation and GIS mapping.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/UOkF9Y1KI-A" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div>
+            <span class="tag">Excel</span>
+            <span class="tag">SW UTM</span>
+            <span class="tag">GIS Data</span>
+          </div>
+        </div>
+
+        <!-- New Video 4 -->
+        <div class="project-card">
+          <h3>5. How to do offline KML file mapping by Mobile in SW Maps</h3>
+          <p>Walkthrough on performing field mapping offline with SW Maps. Trace points/lines, build forms, and export data to Shapefile or GeoJSON.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/15cYvaq488w" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div>
+            <span class="tag">Offline Mapping</span>
+            <span class="tag">KML</span>
+            <span class="tag">GPS Tracking</span>
+          </div>
+        </div>
+
+        <!-- New Video 5 -->
+        <div class="project-card">
+          <h3>6. How to Import Template in SW Map: A Step-by-Step Tutorial</h3>
+          <p>A step-by-step tutorial on managing file directories in Android to import project templates and layers into SW Map.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zNlGN3XHWpQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div>
+            <span class="tag">SW Map</span>
+            <span class="tag">Android Workflow</span>
+            <span class="tag">Templates</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact-info">
+      <h2>Contact</h2>
+      <p>Email: <strong>jayendrasah2023@gmail.com</strong></p>
+      <p>YouTube: <a href="https://www.youtube.com/@jayendra_sah" target="_blank" style="color: var(--accent-color); text-decoration: none;">@jayendra_sah</a></p>
+    </section>
+
+  </div>
+
+</body>
+</html>
