@@ -10,6 +10,11 @@
       --accent-color: #0056b3;
       --bg-light: #f8f9fa;
       --text-main: #333;
+      --success-green: #28a745;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -64,7 +69,7 @@
     .main-content {
       margin-left: 280px;
       padding: 3rem;
-      max-width: 1000px;
+      max-width: 1100px;
     }
 
     section {
@@ -88,8 +93,8 @@
     /* Project Grid Layout */
     .project-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
     }
 
     .project-card {
@@ -97,17 +102,21 @@
       border-radius: 8px;
       padding: 1.5rem;
       background: #fff;
-      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
     .project-card h3 {
       margin-top: 0;
       color: var(--accent-color);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .video-container {
@@ -130,21 +139,31 @@
       background: #e9ecef;
       padding: 4px 12px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       margin-right: 5px;
       margin-bottom: 5px;
       color: var(--accent-color);
       font-weight: bold;
     }
 
-    .contact-info strong {
-      color: var(--accent-color);
+    .btn-download {
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+
+    .btn-download:hover {
+      opacity: 0.9;
     }
 
     @media (max-width: 768px) {
       body { flex-direction: column; }
       nav { width: 100%; height: auto; position: relative; padding: 1.5rem; box-sizing: border-box; }
       .main-content { margin-left: 0; padding: 1.5rem; }
+      .project-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -172,13 +191,14 @@
         <ul style="margin: 0; padding-left: 20px;">
           <li>Rural & Urban Road Design</li>
           <li>Detailed Project Reports (DPR)</li>
-          <li>Drafting</li>
+          <li>Drafting & 3D Modeling</li>
           <li>3D Architectural Animation</li>
         </ul>
         <ul style="margin: 0; padding-left: 20px;">
           <li>Irrigation & Water Supply</li>
           <li>Hydropower Engineering</li>
           <li>Surveying & Mapping</li>
+          <li>Technical Content Creation</li>
         </ul>
       </div>
     </section>
@@ -186,32 +206,31 @@
     <section id="projects">
       <h2>Project Gallery</h2>
       <div class="project-grid">
-<!-- New Project: Traverse Report -->
-<div class="project-card">
-  <h3>7. Closed Traverse Survey Report & Data</h3>
-  <p>A professional survey report detailing the methodology, error adjustment (Bowditch Rule), and coordinate computation for a closed loop traverse. Achieved a high precision of 1:73,000.</p>
-  
-  <div style="margin-top: 15px; display: flex; gap: 10px;">
-    <!-- Replace '#' with your actual file paths -->
-    <a href="traverse_report.pdf" download class="tag" style="text-decoration: none; background: var(--accent-color); color: white;">
-      📥 Download Report (PDF)
-    </a>
-    <a href="traverse_data.xlsx" download class="tag" style="text-decoration: none; background: #28a745; color: white;">
-      📊 Download Excel Data
-    </a>
-  </div>
-  
-  <div style="margin-top: 10px;">
-    <span class="tag">Total Station</span>
-    <span class="tag">Bowditch Rule</span>
-    <span class="tag">Geomatics</span>
-  </div>
-</div>
 
-        <!-- Previous Video (Re-added) -->
+        <div class="project-card" style="grid-column: 1 / -1; border: 2px solid #e0e0e0;">
+          <div>
+            <h3>Closed Traverse Survey Report & Data</h3>
+            <p>A professional survey report detailing the methodology, error adjustment (Bowditch Rule), and coordinate computation for a closed loop traverse. <strong>Achieved a high precision of 1:73,000.</strong></p>
+            
+            <div style="margin: 15px 0; display: flex; flex-wrap: wrap; gap: 10px;">
+              <a href="traverse_report.pdf" download class="btn-download" style="background: var(--accent-color); color: white;">
+                📥 Download Report (PDF)
+              </a>
+              <a href="traverse_data.xlsx" download class="btn-download" style="background: var(--success-green); color: white;">
+                📊 Download Excel Data
+              </a>
+            </div>
+          </div>
+          <div>
+            <span class="tag">Total Station</span>
+            <span class="tag">Bowditch Rule</span>
+            <span class="tag">Geomatics</span>
+          </div>
+        </div>
+
         <div class="project-card">
           <h3>1. SW Maps Tutorial in Nepali</h3>
-          <p>This technical guide demonstrates how to manage layer attributes for efficient surveying and field data collection.</p>
+          <p>Technical guide on managing layer attributes for efficient field data collection.</p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/F2IolZK3GQM" frameborder="0" allowfullscreen></iframe>
           </div>
@@ -221,73 +240,39 @@
           </div>
         </div>
 
-        <!-- New Video 1 -->
         <div class="project-card">
-          <h3>2. How to Convert UTM Coordinates to KML & View in Google Earth</h3>
-          <p>Learn to convert UTM coordinates to KML/KMZ using Global Mapper and visualize survey data in Google Earth Pro. Covers Excel preparation and datum selection.</p>
+          <h3>2. UTM Coordinates to KML Conversion</h3>
+          <p>Learn to convert UTM coordinates and visualize survey data in Google Earth Pro.</p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/0RZAhE1P030" frameborder="0" allowfullscreen></iframe>
           </div>
           <div>
             <span class="tag">Global Mapper</span>
             <span class="tag">Google Earth Pro</span>
-            <span class="tag">UTM Conversion</span>
           </div>
         </div>
 
-        <!-- New Video 2 -->
         <div class="project-card">
-          <h3>3. Measure Land Using Mobile App | Land Area Measurement App</h3>
-          <p>Accurately measure land plots using a mobile phone. Create project attributes, draw polygons, and convert square meters to Ropani-Ana-Paisa-Dam.</p>
+          <h3>3. Land Area Measurement via Mobile</h3>
+          <p>Methodology for measuring plots and converting units to Ropani-Ana-Paisa-Dam.</p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/PBaAzbGL1n8" frameborder="0" allowfullscreen></iframe>
           </div>
           <div>
             <span class="tag">SW Maps</span>
             <span class="tag">Land Survey</span>
-            <span class="tag">Mobile Mapping</span>
           </div>
         </div>
 
-        <!-- New Video 3 -->
         <div class="project-card">
-          <h3>4. How to Convert UTM to Latitude/Longitude Using Excel + Import to Google Earth Pro | Easy Tutorial</h3>
-          <p>Convert Easting and Northing into Lat/Long using SW UTM software and Excel. Essential for GPS data preparation and GIS mapping.</p>
+          <h3>4. UTM to Lat/Long via Excel</h3>
+          <p>Using SW UTM software and Excel for GPS data preparation and GIS mapping.</p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/UOkF9Y1KI-A" frameborder="0" allowfullscreen></iframe>
           </div>
           <div>
             <span class="tag">Excel</span>
             <span class="tag">SW UTM</span>
-            <span class="tag">GIS Data</span>
-          </div>
-        </div>
-
-        <!-- New Video 4 -->
-        <div class="project-card">
-          <h3>5. How to do offline KML file mapping by Mobile in SW Maps</h3>
-          <p>Walkthrough on performing field mapping offline with SW Maps. Trace points/lines, build forms, and export data to Shapefile or GeoJSON.</p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/15cYvaq488w" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div>
-            <span class="tag">Offline Mapping</span>
-            <span class="tag">KML</span>
-            <span class="tag">GPS Tracking</span>
-          </div>
-        </div>
-
-        <!-- New Video 5 -->
-        <div class="project-card">
-          <h3>6. How to Import Template in SW Map: A Step-by-Step Tutorial</h3>
-          <p>A step-by-step tutorial on managing file directories in Android to import project templates and layers into SW Map.</p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/zNlGN3XHWpQ" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div>
-            <span class="tag">SW Map</span>
-            <span class="tag">Android Workflow</span>
-            <span class="tag">Templates</span>
           </div>
         </div>
 
@@ -297,7 +282,7 @@
     <section id="contact" class="contact-info">
       <h2>Contact</h2>
       <p>Email: <strong>jayendrasah2023@gmail.com</strong></p>
-      <p>YouTube: <a href="https://www.youtube.com/@jayendra_sah" target="_blank" style="color: var(--accent-color); text-decoration: none;">@jayendra_sah</a></p>
+      <p>YouTube: <a href="https://www.youtube.com/@jayendra_sah" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: bold;">@jayendra_sah</a></p>
     </section>
 
   </div>
