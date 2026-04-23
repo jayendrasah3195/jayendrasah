@@ -148,11 +148,13 @@
 
     .btn-download {
       text-decoration: none;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 6px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: bold;
       transition: opacity 0.2s;
+      display: inline-flex;
+      align-items: center;
     }
 
     .btn-download:hover {
@@ -182,7 +184,7 @@
     
     <section id="about">
       <h2>Professional Profile</h2>
-      <p>As a Registered Civil Engineer, I focus on the precision of Surveying and Mapping to lay the groundwork for sustainable infrastructure. My career is built on optimizing technical workflows and delivering high-quality designs in road modeling and structural planning. I am passionate about the intersection of engineering and education, regularly producing tutorials to help streamline design processes for the wider engineering community.</p>
+      <p>As a Registered Civil Engineer, I focus on the precision of Surveying and Mapping to lay the groundwork for sustainable infrastructure. My career is built on optimizing technical workflows and delivering high-quality designs in road modeling and structural planning.</p>
     </section>
 
     <section id="services">
@@ -191,14 +193,12 @@
         <ul style="margin: 0; padding-left: 20px;">
           <li>Rural & Urban Road Design</li>
           <li>Detailed Project Reports (DPR)</li>
-          <li>Drafting & 3D Modeling</li>
           <li>3D Architectural Animation</li>
         </ul>
         <ul style="margin: 0; padding-left: 20px;">
-          <li>Irrigation & Water Supply</li>
-          <li>Hydropower Engineering</li>
           <li>Surveying & Mapping</li>
-          <li>Technical Content Creation</li>
+          <li>Hydropower Engineering</li>
+          <li>Technical Education Content</li>
         </ul>
       </div>
     </section>
@@ -207,24 +207,24 @@
       <h2>Project Gallery</h2>
       <div class="project-grid">
 
-        <div class="project-card" style="grid-column: 1 / -1; border: 2px solid #e0e0e0;">
+        <div class="project-card" style="grid-column: 1 / -1; border: 2px solid #ddd; background: #fdfdfd;">
           <div>
-            <h3>Closed Traverse Survey Report & Data</h3>
-            <p>A professional survey report detailing the methodology, error adjustment (Bowditch Rule), and coordinate computation for a closed loop traverse. <strong>Achieved a high precision of 1:73,000.</strong></p>
+            <h3>Closed Traverse Survey Report & Calculation Sheet</h3>
+            <p>Comprehensive technical documentation of a closed loop traverse. This project includes detailed methodology, error adjustment using the Bowditch Rule, and final coordinate computation. <strong>Precision Achieved: 1:73,000.</strong></p>
             
-            <div style="margin: 15px 0; display: flex; flex-wrap: wrap; gap: 10px;">
-              <a href="traverse_report.pdf" download class="btn-download" style="background: var(--accent-color); color: white;">
-                📥 Download Report (PDF)
+            <div style="margin: 20px 0; display: flex; flex-wrap: wrap; gap: 12px;">
+              <a href="Traverse Report.pdf" download class="btn-download" style="background: var(--accent-color); color: white;">
+                📥 Download Full Report (PDF)
               </a>
-              <a href="traverse_data.xlsx" download class="btn-download" style="background: var(--success-green); color: white;">
-                📊 Download Excel Data
+              <a href="Traverse Calculation1.xls" download class="btn-download" style="background: var(--success-green); color: white;">
+                📊 Download Calculation Sheet (Excel)
               </a>
             </div>
           </div>
           <div>
-            <span class="tag">Total Station</span>
-            <span class="tag">Bowditch Rule</span>
-            <span class="tag">Geomatics</span>
+            <span class="tag">Total Station Survey</span>
+            <span class="tag">Bowditch Adjustment</span>
+            <span class="tag">Coordinate Computation</span>
           </div>
         </div>
 
@@ -234,46 +234,52 @@
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/F2IolZK3GQM" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div>
-            <span class="tag">SW Map</span>
-            <span class="tag">Layer Attributes</span>
-          </div>
+          <div><span class="tag">SW Map</span><span class="tag">Field Survey</span></div>
         </div>
 
         <div class="project-card">
-          <h3>2. UTM Coordinates to KML Conversion</h3>
-          <p>Learn to convert UTM coordinates and visualize survey data in Google Earth Pro.</p>
+          <h3>2. UTM to KML Conversion</h3>
+          <p>Converting UTM coordinates for visualization in Google Earth Pro via Global Mapper.</p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/0RZAhE1P030" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div>
-            <span class="tag">Global Mapper</span>
-            <span class="tag">Google Earth Pro</span>
-          </div>
+          <div><span class="tag">Global Mapper</span><span class="tag">KML</span></div>
         </div>
 
         <div class="project-card">
-          <h3>3. Land Area Measurement via Mobile</h3>
-          <p>Methodology for measuring plots and converting units to Ropani-Ana-Paisa-Dam.</p>
+          <h3>3. Mobile Land Area Measurement</h3>
+          <p>Measuring land and converting units to the Ropani-Ana-Paisa-Dam system.</p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/PBaAzbGL1n8" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div>
-            <span class="tag">SW Maps</span>
-            <span class="tag">Land Survey</span>
-          </div>
+          <div><span class="tag">Land Surveying</span><span class="tag">Mobile Mapping</span></div>
         </div>
 
         <div class="project-card">
           <h3>4. UTM to Lat/Long via Excel</h3>
-          <p>Using SW UTM software and Excel for GPS data preparation and GIS mapping.</p>
+          <p>Using SW UTM software and Excel for GPS data preparation.</p>
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/UOkF9Y1KI-A" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div>
-            <span class="tag">Excel</span>
-            <span class="tag">SW UTM</span>
+          <div><span class="tag">GIS Data</span><span class="tag">Excel Workflow</span></div>
+        </div>
+
+        <div class="project-card">
+          <h3>5. Offline Mobile Mapping</h3>
+          <p>Performing field mapping without internet using SW Maps and KML files.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/15cYvaq488w" frameborder="0" allowfullscreen></iframe>
           </div>
+          <div><span class="tag">Offline GIS</span><span class="tag">KML</span></div>
+        </div>
+
+        <div class="project-card">
+          <h3>6. Importing SW Map Templates</h3>
+          <p>Managing directory structures to import project templates in Android.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zNlGN3XHWpQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div><span class="tag">Data Management</span><span class="tag">SW Map</span></div>
         </div>
 
       </div>
